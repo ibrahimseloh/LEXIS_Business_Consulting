@@ -1,9 +1,9 @@
 import streamlit as st, tempfile, fitz, io, os, json, re
 from PIL import Image
 from markdown import markdown
-from src.ocr_processing import ocr_pipeline
-from src.indexing import index_pdf_elements
-from src.query_processing import get_response_with_sources
+from ocr_processing import ocr_pipeline
+from indexing import index_pdf_elements
+from query_processing import get_response_with_sources
 
 SAVE_DIR = "saved_data"
 os.makedirs(SAVE_DIR, exist_ok=True)
