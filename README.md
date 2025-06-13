@@ -58,7 +58,7 @@ To use **LEXIS** locally, follow these steps:
 4. Start the Streamlit app:
 
    ```bash
-   streamlit run app.py
+   streamlit run main.py
    ```
 
 5. Access the app through the browser at `http://localhost:8501`.
@@ -87,7 +87,7 @@ LEXIS-Business-consulting-assistant/
 │   ├── indexing.py               # Indexing documents and generating vector store
 │   ├── query_processing.py       # Query handling and response generation
 │
-├── app.py                        # Streamlit app for interactive use
+├── main.py                        # Streamlit app for interactive use
 ├── requirements.txt              # Python dependencies
 ├── README.md                     # Project documentation
 ├── saved_data/                   # Directory to save user query data
