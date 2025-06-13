@@ -1,18 +1,18 @@
-# Utilisation de l'image Python officielle
-FROM python:3.9-slim
+# Étape 1 : Installer les dépendances et construire
+FROM python:3.9-alpine as build
 
-# Définir le répertoire de travail
 WORKDIR /app
-
-# Copier le fichier requirements.txt et l'installer
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copier tout le projet dans le conteneur
+# Étape 2 : Créer l'image finale légère
+FROM python:3.9-alpine
+
+WORKDIR /app
+COPY --from=build /app /app
+
+# Copier le reste du projet
 COPY . /app/
 
-# Exposer le port que Streamlit utilise
 EXPOSE 8501
-
-# Commande pour exécuter Streamlit
 CMD ["streamlit", "run", "main.py"]
