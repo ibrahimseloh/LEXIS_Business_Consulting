@@ -103,7 +103,7 @@ langchain-community==0.3.24
 langchain-core==0.3.59
 langchain-google-genai==1.0.10
 langchain-openai==0.1.23
-langchain-text-splitters==0.2.4
+langchain-text-splitters
 langdetect==1.0.9
 langsmith==0.1.147
 layoutparser==0.3.4
