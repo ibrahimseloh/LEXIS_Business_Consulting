@@ -264,7 +264,7 @@ typing-inspect==0.9.0
 typing-inspection==0.4.0
 tzdata==2024.2
 uncompyle6==3.9.2
-unstructured==0.15.13
+unstructured==0.17.2
 unstructured-client==0.25.9
 unstructured-inference==0.7.36
 unstructured.pytesseract==0.3.13
