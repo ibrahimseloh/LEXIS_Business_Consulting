@@ -1,8 +1,8 @@
 {
-  "builds": [
-    {
-      "src": "./Dockerfile",
-      "use": "@railway/aws-ecs"
-    }
-  ]
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "streamlit run main.py --server.port=$PORT --server.address=0.0.0.0"
+  }
 }
